@@ -15,16 +15,20 @@ namespace TotoGUI
         public Form1()
         {
             InitializeComponent();
-        }
+        }     
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox1.Text.Length == 14)
+            {
+                checkBox1.Checked = false;
+            }
+            else
+            {
+                checkBox1.Checked = true;
+            }
+            checkBox1.Text = $"Nem megfelelő a karakterek száma ({textBox1.Text.Length})";
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
